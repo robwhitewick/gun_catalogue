@@ -1,6 +1,6 @@
 # gun_catalogue
  
-## ade with blood, sweat and tears by [Steady](https://github.com/steadyspring) and Erratic
+Made with blood, sweat and tears by [Steady](https://github.com/steadyspring) and Erratic
 
 
 
