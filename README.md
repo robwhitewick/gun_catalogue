@@ -8,7 +8,7 @@
 
 [Forum post](https://forum.cfx.re/t/release-gun-catalogue-a-clean-interactive-and-immersive-gun-store/1305405)
 
---
+---
 
 Right arrow and left arrow allow you to quickly switch pages.
 
@@ -18,4 +18,3 @@ Backspace and escape to exit the book.
 
 Prices need to be changed server and client (JS)
 
-Prices need to be changed in server and client (JS)
