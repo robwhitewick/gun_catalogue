@@ -1,6 +1,6 @@
 # gun_catalogue
  
-Made with blood, sweat and tears by [Steady](https://github.com/steadyspring) and Erratic
+# Made with blood, sweat and tears by [Steady](https://github.com/steadyspring) and Erratic
 
 
 
@@ -8,6 +8,7 @@ Made with blood, sweat and tears by [Steady](https://github.com/steadyspring) an
 
 [Forum post](https://forum.cfx.re/t/release-gun-catalogue-a-clean-interactive-and-immersive-gun-store/1305405)
 
+--
 
 Right arrow and left arrow allow you to quickly switch pages.
 
