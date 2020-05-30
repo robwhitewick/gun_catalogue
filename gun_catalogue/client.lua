@@ -131,15 +131,7 @@ Citizen.CreateThread(function ()
     end
 end)
 
-RegisterCommand('delprop', function()
-    for i=1,#prop do
-        DeleteObject(prop[i])
-    end
-end, false)
 
-RegisterCommand('scale', function(source, args, rawcommand)
-    SetPedScale(PlayerPedId(),tonumber(args[1]))
-end, false)
 
 function startup()
     isOpen = false
