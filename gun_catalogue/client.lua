@@ -232,12 +232,6 @@ function Purchase(data)
 end
 
 
-RegisterCommand('removeallweapons', function()
-    RemoveAllPedWeapons(PlayerPedId(),1,1)
-end, false)
-
-
-RegisterCommand('openui', function(...) doOpen = true; end)
 RegisterCommand('closeui', function(...) doClose = true; end)
 RegisterNUICallback('purchaseweapon', Purchase)
 RegisterNUICallback('close', CloseUI)

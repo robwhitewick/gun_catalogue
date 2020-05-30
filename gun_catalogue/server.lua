@@ -54,7 +54,6 @@ AddEventHandler("gunCatalogue:Purchase", function(data,code1)
 	if code == code1 then
 		TriggerEvent('redem:getPlayerFromId', _source, function(user) 
 			local cash = user.getMoney()
-			print(data.isammo)
 			if tonumber(data.isammo) ~= 1 then
 				if doesweaponexist(data.weapon) then
 					local weapon2 = weapon2(data.weapon)
