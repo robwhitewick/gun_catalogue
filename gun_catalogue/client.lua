@@ -45,6 +45,17 @@ local weapons = {
     'WEAPON_SHOTGUN_PUMP',
     'WEAPON_SHOTGUN_REPEATING',
     'WEAPON_SHOTGUN_SEMIAUTO', 
+    'WEAPON_BOW',
+    'WEAPON_LASSO',
+    'WEAPON_MELEE_BROKEN_SWORD',
+    'WEAPON_MELEE_LANTERN',
+    'WEAPON_MELEE_HATCHET',
+    'WEAPON_MELEE_KNIFE',
+    'WEAPON_THROWN_THROWING_KNIVES',
+    'WEAPON_MELEE_MACHETE',
+    'WEAPON_THROWN_TOMAHAWK',
+    'WEAPON_THROWN_DYNAMITE',
+    'WEAPON_THROWN_MOLOTOV',
 }
 
 RegisterNetEvent('gunCatalogue:SendCode')
@@ -90,10 +101,10 @@ end)
 
 AddEventHandler('onResourceStop', function(resource)
     if resource == GetCurrentResourceName() then
-		PromptSetEnabled(store, false)
+        PromptSetEnabled(store, false)
         PromptSetVisible(store, false)
         FreezeEntityPosition(PlayerPedId(), false)
-	end
+    end
 end)
 
 function StorePrompt()
@@ -197,6 +208,8 @@ function PurchaseWeapon(data,code1)
                             local ammo = ammo + 10
                             SetPedAmmo(GetPlayerPed(), GetHashKey(data.weapon), ammo)
                             currentweapons = {}
+                        elseif weapons[i] == data.weapon and data.isbow then
+                            Citizen.InvokeNative(0x106A811C6D3035F3, GetPlayerPed(), GetHashKey('AMMO_ARROW'), 10, 752097756)
                         else
                             RemoveWeaponFromPed(PlayerPedId(),GetHashKey(data.weapon),true,-142743235)
                             exports['mythic_notify']:DoLongHudText('error', 'Same type of gun or ammo detected. Canceling.')
@@ -227,4 +240,5 @@ end
 RegisterCommand('closeui', function(...) doClose = true; end)
 RegisterNUICallback('purchaseweapon', Purchase)
 RegisterNUICallback('close', CloseUI)
+
 
