@@ -228,4 +228,3 @@ RegisterCommand('closeui', function(...) doClose = true; end)
 RegisterNUICallback('purchaseweapon', Purchase)
 RegisterNUICallback('close', CloseUI)
 
-

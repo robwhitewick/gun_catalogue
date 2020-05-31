@@ -289,7 +289,7 @@ window.addEventListener('message', function(event) {
                             color: "white",
                         },
                         {   /* 27 back-side*/
-                            content: "<div>  <img class = \"ad\" src=\"https://raw.githubusercontent.com/TTVErraticAlcoholic/catalogue_images/master/page28.png\" alt=\"ad\" tabindex=\"0\">  <p class=\"credits\">Made by Steady and Erratic. RIP Depth.</p></div>",
+                            content: "<div>  <img class = \"ad\" src=\"https://raw.githubusercontent.com/TTVErraticAlcoholic/catalogue_images/master/back.png\" alt=\"ad\" tabindex=\"0\">  <p class=\"credits\">Made by Steady and Erratic. RIP Depth.</p></div>",
                             background: "https://raw.githubusercontent.com/TTVErraticAlcoholic/catalogue_images/master/leather.jpg",
                             backgroundColor: "#353535",
                             color: "white",
