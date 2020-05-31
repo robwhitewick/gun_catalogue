@@ -18,3 +18,22 @@ Backspace and escape to exit the book.
 
 Prices need to be changed server and client (JS)
 
+---
+
+# Changelog v1.1
+
+Added Misc. section on the index.
+
+Added the following weapons:
+
+- Bow and arrow
+- Lasso
+- Antique Sword
+- Lantern
+- Hatchet
+- Hunting Knife
+- Throwing Knives
+- Machete
+- Tomahawk
+- Dynamite
+- Fire Bottle
