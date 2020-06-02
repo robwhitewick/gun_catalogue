@@ -22,6 +22,13 @@ Prices need to be changed server and client (JS)
 
 ---
 
+# Changelog v1.2
+
+- Added redEM_inventory support. 
+- Guns should now save on respawn/relog. 
+- Credits to Crypto as we are using his method of adding them as items.
+
+
 # Changelog v1.1
 
 Added Misc. section on the index.
