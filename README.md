@@ -10,6 +10,8 @@ Made with blood, sweat and tears by [Steady](https://github.com/steadyspring) an
 
 ---
 
+# DO NOT RENAME THE RESOURCE UNLESS YOU KNOW WHAT YOU'RE DOING!
+
 Right arrow and left arrow allow you to quickly switch pages.
 
 You can use the index to find the category you need.
