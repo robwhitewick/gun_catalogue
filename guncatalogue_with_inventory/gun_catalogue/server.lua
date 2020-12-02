@@ -75,7 +75,7 @@ AddEventHandler("gunCatalogue:Purchase", function(data,code1)
 				local weapon2 = weapon2(data.weapon)
 				if weapon2 then
 					if cash >= weapon2['PRICE'] then
-						local itemData = Framework.getItem(_source, GetHashKey(data.weapon))
+						local ItemData = Framework.getItem(_source, GetHashKey(data.weapon))
 						ItemData.AddItem(1)
 						TriggerClientEvent('mythic_notify:client:SendAlert:long', _source, { type = 'success', text = 'Received '..weapon2['label']})
 						user.removeMoney(weapon2['PRICE'])
@@ -89,7 +89,7 @@ AddEventHandler("gunCatalogue:Purchase", function(data,code1)
 				local weapon2 = weapon2(data.weapon)
 				if weapon2 then
 					if cash >= weapon2['AMMOPRICE'] then
-						local itemData = Framework.getItem(_source, data.weapon, 1)
+						local ItemData = Framework.getItem(_source, data.weapon)
 						ItemData.AddItem(1)
 						TriggerClientEvent('mythic_notify:client:SendAlert:long', _source, { type = 'success', text = 'Received '..weapon2['label']})
 						user.removeMoney(weapon2['AMMOPRICE'])
