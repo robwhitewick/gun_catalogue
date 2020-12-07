@@ -75,7 +75,8 @@ AddEventHandler("gunCatalogue:Purchase", function(data,code1)
 				local weapon2 = weapon2(data.weapon)
 				if weapon2 then
 					if cash >= weapon2['PRICE'] then
-						Framework.addItem(_source, data.weapon, 0, GetHashKey(data.weapon))
+						local ItemData = Framework.getItem(_source, GetHashKey(data.weapon))
+						ItemData.AddItem(1)
 						TriggerClientEvent('mythic_notify:client:SendAlert:long', _source, { type = 'success', text = 'Received '..weapon2['label']})
 						user.removeMoney(weapon2['PRICE'])
 					else
@@ -88,7 +89,8 @@ AddEventHandler("gunCatalogue:Purchase", function(data,code1)
 				local weapon2 = weapon2(data.weapon)
 				if weapon2 then
 					if cash >= weapon2['AMMOPRICE'] then
-						Framework.addItem(_source, data.weapon, 1)
+						local ItemData = Framework.getItem(_source, data.weapon)
+						ItemData.AddItem(1)
 						TriggerClientEvent('mythic_notify:client:SendAlert:long', _source, { type = 'success', text = 'Received '..weapon2['label']})
 						user.removeMoney(weapon2['AMMOPRICE'])
 					else
@@ -111,35 +113,40 @@ AddEventHandler("RegisterUsableItem:revolver_ammo", function(source)
 	local _source = source
 	print("hi")
 	TriggerClientEvent('gunCatalogue:giveammo', _source, "WEAPON_REVOLVER_CATTLEMAN",code)
-	Framework.delItem(source,"revolver_ammo", 1)
+	local ItemData = Framework.getItem(_source, 'revolver_ammo', 1)
+	ItemData.RemoveItem(1)
 end)
 -------- Pistol
 RegisterServerEvent("RegisterUsableItem:pistol_ammo")
 AddEventHandler("RegisterUsableItem:pistol_ammo", function(source)
 	local _source = source
 	TriggerClientEvent('gunCatalogue:giveammo', _source, "WEAPON_PISTOL_MAUSER",code)
-	Framework.delItem(source,"pistol_ammo", 1)
+	local ItemData = Framework.getItem(_source, 'pistol_ammo', 1)
+	ItemData.RemoveItem(1)
 end)
 -------- 22 Ammo
 RegisterServerEvent("RegisterUsableItem:22_ammo")
 AddEventHandler("RegisterUsableItem:22_ammo", function(source)
 	local _source = source
 	TriggerClientEvent('gunCatalogue:giveammo', _source, "WEAPON_RIFLE_VARMINT",code)
-	Framework.delItem(source,"22_ammo", 1)
+	local ItemData = Framework.getItem(_source, '22_ammo', 1)
+	ItemData.RemoveItem(1)
 end)
 -------- Rifle
 RegisterServerEvent("RegisterUsableItem:rifle_ammo")
 AddEventHandler("RegisterUsableItem:rifle_ammo", function(source)
 	local _source = source
 	TriggerClientEvent('gunCatalogue:giveammo', _source, "WEAPON_RIFLE_BOLTACTION",code)
-	Framework.delItem(source,"rifle_ammo", 1)
+	local ItemData = Framework.getItem(_source, '22_ammo', 1)
+	ItemData.RemoveItem(1)
 end)
 -------- Shotgun Shells
 RegisterServerEvent("RegisterUsableItem:shotgun_ammo")
 AddEventHandler("RegisterUsableItem:shotgun_ammo", function(source)
 	local _source = source
 	TriggerClientEvent('gunCatalogue:giveammo', _source, "WEAPON_SHOTGUN_DOUBLEBARREL",code)
-	Framework.delItem(source,"shotgun_ammo", 1)
+	local ItemData = Framework.getItem(_source, 'shotgun_ammo', 1)
+	ItemData.RemoveItem(1)
 end)
 
 -------- Repeater
@@ -147,21 +154,24 @@ RegisterServerEvent("RegisterUsableItem:repeator_ammo")
 AddEventHandler("RegisterUsableItem:repeator_ammo", function(source)
 	local _source = source
 	TriggerClientEvent('gunCatalogue:giveammo', _source, "WEAPON_REPEATER_EVANS",code)
-	Framework.delItem(source,"repeator_ammo", 1)
+	local ItemData = Framework.getItem(_source, 'repeator_ammo', 1)
+	ItemData.RemoveItem(1)
 end)
 -------- Sniper
 RegisterServerEvent("RegisterUsableItem:snipe_ammo")
 AddEventHandler("RegisterUsableItem:snipe_ammo", function(source)
 	local _source = source
 	TriggerClientEvent('gunCatalogue:giveammo', _source, "WEAPON_SNIPERRIFLE_CARCANO",code)
-	Framework.delItem(source,"snipe_ammo", 1)
+	local ItemData = Framework.getItem(_source, 'snipe_ammo', 1)
+	ItemData.RemoveItem(1)
 end)
 -------- Arrows
 RegisterServerEvent("RegisterUsableItem:arrows")
 AddEventHandler("RegisterUsableItem:arrows", function(source)
 	local _source = source
 	TriggerClientEvent('gunCatalogue:giveammo', _source, "WEAPON_BOW",code)
-	Framework.delItem(source,"arrows", 1)
+	local ItemData = Framework.getItem(_source, 'arrows', 1)
+	ItemData.RemoveItem(1)
 end)
 
 -- Print contents of `tbl`, with indentation.
